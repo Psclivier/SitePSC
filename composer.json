@@ -1,0 +1,6 @@
+{
+    "require-dev": {
+        "symfony/web-server-bundle": "^4.1",
+        "sensiolabs/security-checker": "^4.1"
+    }
+}
