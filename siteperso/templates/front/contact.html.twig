@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% form_theme formContact 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    <h1>Contact</h1>
+    {{ form_start(formContact) }}
+    {{ form_widget(formContact) }}
+    <button type="submit" class="btn btn-success">Envoyer</button>
+    {{ form_end(formContact) }}
+{% endblock %}
