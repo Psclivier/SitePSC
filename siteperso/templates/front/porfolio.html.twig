@@ -1,7 +1,54 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <a href="http://www.paulinsc.fr/bloglitteraire/public/">Blog</a></br>
-    <a href="http://www.paulinsc.fr/strasbourg/">Ville de Strasbourg</a></br>
-    <a href="http://www.paulinsc.fr/velib/">Velib'</a>
-    <a href=""></a>
+    <section id="one" class="wrapper style2 spotlights">
+        <section>
+            <a href="#" class="image"><img src="{{ asset('images/webagency.jpg') }}" alt="" data-position="center center" /></a>
+            <div class="content">
+                <div class="inner">
+                    <h2>Sed ipsum dolor</h2>
+                    <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                    <ul class="actions">
+                        <li><a href="http://www.paulinsc.fr/webagencypsc/" class="button">Learn more</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <a href="#" class="image"><img src="{{ asset('images/strasbourg.jpg') }}" alt="" data-position="top center" /></a>
+            <div class="content">
+                <div class="inner">
+                    <h2>Feugiat consequat</h2>
+                    <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                    <ul class="actions">
+                        <li><a href="http://www.strasbourg.paulinsc.fr/Accueil/" class="button">Learn more</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <a href="#" class="image"><img src="{{ asset('images/velib.jpg') }}" alt="" data-position="25% 25%" /></a>
+            <div class="content">
+                <div class="inner">
+                    <h2>Ultricies aliquam</h2>
+                    <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                    <ul class="actions">
+                        <li><a href="http://www.paulinsc.fr/velib/" class="button">Learn more</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <a href="#" class="image"><img src="{{ asset('images/alaska.jpg') }}" alt="" data-position="25% 25%" /></a>
+            <div class="content">
+                <div class="inner">
+                    <h2>Ultricies aliquam</h2>
+                    <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                    <ul class="actions">
+                        <li><a href="http://www.paulinsc.fr/bloglitteraire/public/" class="button">Learn more</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
 {% endblock %}
+
