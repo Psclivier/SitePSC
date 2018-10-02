@@ -17,7 +17,7 @@ class BackController extends AbstractController
     /**
      * @Route("/inscription", name="registration")
      */
-    public function registration(Request $request, ObjectManager $manager){
+    public function registration(Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder){
         $user = new User();
 
         $form = $this->createForm(RegistrationType::class, $user);
@@ -25,9 +25,11 @@ class BackController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
+            $hash = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($hash);
             $manager->persist($user);
             $manager->flush();
-            return $this->redirectToRoute('security_login');
+            return $this->redirectToRoute('app_login');
         }
         return $this->render('back/registration.html.twig', [
             'form' => $form->createView()
