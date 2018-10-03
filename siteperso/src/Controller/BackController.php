@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Message;
 use App\Form\RegistrationType;
+use App\Repository\MessageRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -57,7 +59,11 @@ class BackController extends AbstractController
      * @Route("/admin/message", name="message_page")
      */
     public function contact(){
-        return $this->render('back/message.html.twig');
+        $repo = $this->getDoctrine()->getRepository(Message::class);
+        $messages = $repo->findAll();
+        return $this->render('back/message.html.twig', [
+            'messages' => $messages
+        ]);
     }
 
     /**
