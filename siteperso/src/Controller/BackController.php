@@ -53,5 +53,19 @@ class BackController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/admin/message", name="message_page")
+     */
+    public function contact(){
+        return $this->render('back/message.html.twig');
+    }
+
+    /**
+     * @Route("/logout", name="app_logout")
+     */
+    public function logout(){
+
+    }
+
 
 }
