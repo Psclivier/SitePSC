@@ -32,7 +32,7 @@ class BackController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
         return $this->render('back/registration.html.twig', [
-            'form' => $form->createView()
+            'form_registration' => $form->createView()
         ]);
     }
 

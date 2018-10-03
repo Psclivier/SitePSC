@@ -8,22 +8,33 @@
                 <section>
                     <form method="post" action="#">
                         <div class="fields">
+                            {#<div class="field half">#}
+                                {#<label for="name">Name</label>#}
+                                {#<input type="text" name="name" id="name" />#}
+                            {#</div>#}
+                            {#<div class="field half">#}
+                                {#<label for="email">Email</label>#}
+                                {#<input type="text" name="email" id="email" />#}
+                            {#</div>#}
+                            {#<div class="field">#}
+                                {#<label for="message">Message</label>#}
+                                {#<textarea name="message" id="message" rows="5"></textarea>#}
+                            {#</div>#}
+                            {{ form_start(formContact) }}
                             <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" />
+                                {{ form_row(formContact.name) }}
                             </div>
                             <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" />
+                                {{ form_row(formContact.email) }}
                             </div>
                             <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="5"></textarea>
+                                {{ form_row(formContact.content) }}
                             </div>
+                            <button class="btn btn-lg btn-primary btn-block" id="contact_button" type="submit">
+                                Envoyer
+                            </button>
+                            {{ form_end(formContact) }}
                         </div>
-                        <ul class="actions">
-                            <li><a href="" class="button submit">Send Message</a></li>
-                        </ul>
                     </form>
                 </section>
                 <section>

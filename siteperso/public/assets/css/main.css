@@ -2779,7 +2779,10 @@ input, select, textarea {
 			ul.contact > li:first-child {
 				margin-top: 0;
 			}
-
+	#contact_button{
+		margin-left: 3em;
+		margin-top: 2em;
+	}
 /* Icons */
 
 	ul.icons {
