@@ -2023,7 +2023,7 @@ input, select, textarea {
 				transform: scale(1);
 				position: absolute;
 				left: 1em;
-				top: 1em;
+				top: 3em;
 				opacity: 1;
 			}
 
@@ -2510,7 +2510,7 @@ input, select, textarea {
 		}
 
 			.icon.major:before {
-				font-size: 1.25em;
+				font-size: 4em;
 			}
 
 				.wrapper.style1 .icon.major:before {

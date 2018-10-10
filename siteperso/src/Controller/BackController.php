@@ -17,7 +17,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class BackController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="registration")
+     * @Route("/inscription", name="app_registration")
      */
     public function registration(Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder){
         $user = new User();
